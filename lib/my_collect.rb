@@ -1,4 +1,4 @@
-def my_collect(students)
+def my_collect(array)
   i = 0 
   empty_array = []
   while i < students.length 
