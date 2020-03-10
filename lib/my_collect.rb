@@ -8,9 +8,10 @@ def my_collect(students)
   empty_array
 end
 
-my_collect(["Tim Jones", "Tom Smith", "Jim Campagno"]) do |name|
-  name.split(" ").first 
-end 
+array = ["Tim Jones", "Tom Smith", "Jim Campagno"]
+my_collect(array) do |name|
+  name.split(" ").first
+end
 
 def my_collect(languages)
   i = 0 
