@@ -1,11 +1,11 @@
 def my_collect(students)
   i = 0 
-  
+  empty_array = []
   while i < students.length 
-   yield students[i]
+   empty_array << yield students[i]
    i +=1 
   end
-  students
+  empty_array
 end
 
 my_collect(["Tim Jones", "Tom Smith", "Jim Campagno"]) do |name|
@@ -14,12 +14,12 @@ end
 
 def my_collect(languages)
   i = 0 
-  
+  empty_array = []
   while i < languages.length 
    yield languages[i]
    i +=1 
   end
-  languages
+  empty_array
 end
 
 collection = ['ruby', 'javascript', 'python', 'objective-c']
