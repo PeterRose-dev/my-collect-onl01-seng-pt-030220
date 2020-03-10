@@ -3,7 +3,7 @@ def my_collect(students)
   empty_array = []
   while i < students.length 
    empty_array << yield (array[i])
-   i +=1 
+    i +=1 
   end
   empty_array
 end
