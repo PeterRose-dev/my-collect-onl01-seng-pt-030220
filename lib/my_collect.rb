@@ -21,7 +21,7 @@ def my_collect(collection)
    languages << yield collection[i]
    i +=1 
   end
-  collection
+  languages
 end
 
 collection = ['ruby', 'javascript', 'python', 'objective-c']
