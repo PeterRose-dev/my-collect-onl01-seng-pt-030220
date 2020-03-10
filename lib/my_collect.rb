@@ -1,10 +1,10 @@
-def my_collect(array)
+def my_collect(students)
   i = 0 
   
-  while i < array.length 
-   yield array[i]
+  while i < students.length 
+   yield students[i]
   end
-  array
+  students
 end
 
 my_collect(["Tim Jones", "Tom Smith", "Jim Campagno"]) do |name|
