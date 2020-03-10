@@ -1,15 +1,15 @@
-def my_collect(array)
+def my_collect(students)
   i = 0 
   empty_array = []
-  while i < array.length 
+  while i < students.length 
    empty_array << yield array[i]
    i +=1 
   end
   empty_array
 end
 
-array = ["Tim Jones", "Tom Smith", "Jim Campagno"]
-my_collect(array) do |name|
+students = ['Tim Jones', 'Tom Smith', 'Sophie Johnson', 'Antoin Miller'] 
+my_collect(students) do |name|
   name.split(" ").first
 end
 
