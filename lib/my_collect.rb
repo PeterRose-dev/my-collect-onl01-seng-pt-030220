@@ -1,29 +1,30 @@
-def my_collect(students)
-  i = 0 
-  empty_array = []
-  while i < students.length 
-   empty_array << yield (students[i])
-    i +=1 
+def my_collect(array)
+  i = 0
+  collection = []
+  while i < array.length
+    collection << yield(array[i])
+    i += 1
   end
-  empty_array
+  collection
 end
 
-students = ['Tim Jones', 'Tom Smith', 'Sophie Johnson', 'Antoin Miller'] 
-my_collect(students) do |name|
+array = ['Tim Jones', 'Tom Smith', 'Sophie Johnson', 'Antoin Miller']
+my_collect(array) do |name|
   name.split(" ").first
 end
 
+
 def my_collect(languages)
   i = 0 
-  empty_array = []
+  collection = []
   while i < languages.length 
-   yield languages[i]
+   collection << yield languages[i]
    i +=1 
   end
-  empty_array
+  collection
 end
 
-collection = ['ruby', 'javascript', 'python', 'objective-c']
-my_collect(collection) do |lang|
+languages = ['ruby', 'javascript', 'python', 'objective-c']
+my_collect(languages) do |lang|
   lang.upcase
 end
